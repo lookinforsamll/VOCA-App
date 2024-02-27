@@ -39,6 +39,7 @@ class ProfilFragment : Fragment() {
         binding.btnEp.setOnClickListener {
             val intent = Intent(activity, ProfilActivity::class.java)
             startActivity(intent)
+            requireActivity().finish()
         }
 
         binding.btnSdk.setOnClickListener {

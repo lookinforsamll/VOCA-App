@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.kontak -> navController.navigate(R.id.kontakFragment)
                 R.id.profil -> navController.navigate(R.id.profilFragment)
             }
-            true
         }
     }
 }

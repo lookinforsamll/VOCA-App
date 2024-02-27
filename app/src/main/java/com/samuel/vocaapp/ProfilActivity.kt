@@ -21,6 +21,8 @@ class ProfilActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.btnEpBack.setOnClickListener {
+            val intent = Intent(this@ProfilActivity, MainActivity::class.java)
+            startActivity(intent)
             finish()
         }
 

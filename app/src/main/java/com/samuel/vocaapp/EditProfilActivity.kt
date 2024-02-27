@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -31,6 +33,7 @@ class EditProfilActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private lateinit var userId: String
     private lateinit var storageReference: StorageReference
+    private lateinit var getContent: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +45,13 @@ class EditProfilActivity : AppCompatActivity() {
         database = Firebase.database.reference
         storageReference = FirebaseStorage.getInstance().reference
         userId = auth.currentUser!!.uid
+
+        getContent = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                data?.let { handleImageSelectionResult(it) }
+            }
+        }
 
         binding.btnEppBack.setOnClickListener {
             val intent = Intent(this@EditProfilActivity, ProfilActivity::class.java)
@@ -91,7 +101,7 @@ class EditProfilActivity : AppCompatActivity() {
         binding.btnGantipp.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
-            startActivityForResult(intent, 1)
+            getContent.launch(intent)
         }
 
         binding.editButton.setOnClickListener {
@@ -135,14 +145,11 @@ class EditProfilActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
-            val imageUri: Uri = data.data!!
-
-            startCropActivity(imageUri)
-        } else if (requestCode == UCrop.REQUEST_CROP && resultCode == Activity.RESULT_OK && data != null) {
+        if (requestCode == UCrop.REQUEST_CROP && resultCode == Activity.RESULT_OK && data != null) {
             val resultUri: Uri? = UCrop.getOutput(data)
             resultUri?.let {
                 val fileRef: StorageReference =
@@ -166,11 +173,16 @@ class EditProfilActivity : AppCompatActivity() {
         }
     }
 
+    private fun handleImageSelectionResult(data: Intent) {
+        val imageUri: Uri? = data.data
+        imageUri?.let { startCropActivity(it) }
+    }
+
     private fun startCropActivity(imageUri: Uri) {
         val destinationFileName = "${userId}_cropped.jpg"
         val options = UCrop.Options()
         options.setCompressionQuality(70)
-        options.setHideBottomControls(true)
+        options.setHideBottomControls(false)
         options.setToolbarColor(ContextCompat.getColor(this, R.color.cyan))
 
         UCrop.of(imageUri, Uri.fromFile(File(cacheDir, destinationFileName)))
