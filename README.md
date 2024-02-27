@@ -2,7 +2,7 @@ Tugas Pemrograman Dasar
 
 Informasi Aplikasi: 
 - Nama Aplikasi                : VOCA App
-- Versi Aplikasi               : 1.0.0.ACSSY
+- Versi Aplikasi               : 1.0.0.release.ACSSY
 - Nama Package                 : com.samuel.vocaapp
 - Bahasa                       : Kotlin
 - Build Configuration Language : Kotlin DSL
