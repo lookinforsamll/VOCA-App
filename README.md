@@ -16,4 +16,6 @@ Informasi Aplikasi:
   4. Steven Christian: Designer
   5. Yosi Salvador   : Designer
  
+  DOWNLOAD APLIKASI DI VOCA App APK.apk
+ 
   Sekian, Terima kasih.
