@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/berandaFragment2">
+
+    <fragment
+        android:id="@+id/kontakFragment"
+        android:name="com.samuel.vocaapp.fragment.KontakFragment"
+        android:label="fragment_kontak"
+        tools:layout="@layout/fragment_kontak" >
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.samuel.vocaapp.fragment.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/berandaFragment2"
+        android:name="com.samuel.vocaapp.fragment.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" >
+    </fragment>
+    <fragment
+        android:id="@+id/tentangFragment2"
+        android:name="com.samuel.vocaapp.fragment.TentangFragment"
+        android:label="fragment_tentang"
+        tools:layout="@layout/fragment_tentang" >
+    </fragment>
+
+</navigation>

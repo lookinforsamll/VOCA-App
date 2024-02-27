@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "267483232372",
+    "firebase_url": "https://voca-appp-default-rtdb.firebaseio.com",
+    "project_id": "voca-appp",
+    "storage_bucket": "voca-appp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267483232372:android:7fd4125b118e6f00b6f921",
+        "android_client_info": {
+          "package_name": "com.samuel.vocaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267483232372-tmvcr112rrusc8bmgg6anllegkm9nbs6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samuel.vocaapp",
+            "certificate_hash": "814148a625fbb91f84b2a115f6f5536973b505ae"
+          }
+        },
+        {
+          "client_id": "267483232372-hhhg6jgpacan5f7vn04dplclsfchktqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOJv7pjNaA01yjnfCzmHiAuNab1-l3Az8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267483232372-hhhg6jgpacan5f7vn04dplclsfchktqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

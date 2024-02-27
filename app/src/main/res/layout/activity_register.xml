@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/txt_register1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/jua"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_register2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosansbold"
+        android:text="Mari bergabung bersama kami!"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_register1" />
+
+    <TextView
+        android:id="@+id/txt_register3"
+        android:layout_width="340dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/notosans"
+        android:text="Dapatkan akses yang lebih mudah ke berbagai informasi mengenai seputar sekolah dalam satu genggam!"
+        android:textColor="#5F5F5F"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_register2" />
+
+
+
+    <EditText
+        android:id="@+id/edt_register_email"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edt_lr"
+        android:elevation="10dp"
+        android:fontFamily="@font/notosans"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_register3" />
+
+    <EditText
+        android:id="@+id/edt_register_password"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_lr"
+        android:elevation="10dp"
+        android:fontFamily="@font/notosans"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_register_email" />
+
+    <TextView
+        android:id="@+id/txt_register5"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/notosans"
+        android:text="Password bisa terdiri atas huruf, nomor, dan simbol dengan minimal 6 karakter."
+        android:textColor="#1E1E1E"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_register_password" />
+
+    <EditText
+        android:id="@+id/edt_register_konfirmasi_password"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_lr"
+        android:elevation="10dp"
+        android:fontFamily="@font/notosans"
+        android:hint="Konfirmasi Password"
+        android:inputType="textPassword"
+        android:paddingLeft="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_register5" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_lr"
+        android:fontFamily="@font/notosanssemibold"
+        android:hint="Berikutnya"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_register_konfirmasi_password" />
+
+    <TextView
+        android:id="@+id/txt_register6"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/notosans_medium"
+        android:justificationMode="inter_word"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_register" />
+
+    <ImageView
+        android:id="@+id/img_r_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/img_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_register7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:fontFamily="@font/notosans"
+        android:text="Sudah punya akun?"
+        android:textColor="#414141"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_r_line" />
+
+    <TextView
+        android:id="@+id/txt_r_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/notosans"
+        android:text="Masuk di sini"
+        android:textColor="#11378D"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_register7"
+        app:layout_constraintTop_toBottomOf="@id/img_r_line" />
+</androidx.constraintlayout.widget.ConstraintLayout>

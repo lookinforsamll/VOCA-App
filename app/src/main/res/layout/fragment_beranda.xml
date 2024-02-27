@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.BerandaFragment">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_width="330dp"
+        android:layout_height="138dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="1"
+        app:sliderStartAutoCycle="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="330dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSlider">
+
+        <ImageButton
+            android:id="@+id/btn_jadwal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_jadwal"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/txt_jadwal"
+            android:layout_width="39dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Jadwal"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_jadwal"
+            app:layout_constraintStart_toStartOf="@+id/btn_jadwal"
+            app:layout_constraintTop_toBottomOf="@+id/btn_jadwal" />
+
+        <ImageButton
+            android:id="@+id/btn_piket"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_piket"
+            app:layout_constraintStart_toEndOf="@+id/btn_jadwal"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/txt_piket"
+            android:layout_width="28dp"
+            android:layout_height="18sp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Piket"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_piket"
+            app:layout_constraintStart_toStartOf="@+id/btn_piket"
+            app:layout_constraintTop_toBottomOf="@+id/btn_piket" />
+
+        <ImageButton
+            android:id="@+id/btn_pengumuman"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_pengumuman"
+            app:layout_constraintStart_toEndOf="@+id/btn_piket"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/txt_pengumuman"
+            android:layout_width="73dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Pengumuman"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_pengumuman"
+            app:layout_constraintStart_toStartOf="@+id/btn_pengumuman"
+            app:layout_constraintTop_toBottomOf="@+id/btn_pengumuman" />
+
+        <ImageButton
+            android:id="@+id/btn_administrasi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_website"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_pengumuman"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/txt_website"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Administrasi"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_administrasi"
+            app:layout_constraintStart_toStartOf="@+id/btn_administrasi"
+            app:layout_constraintTop_toBottomOf="@+id/btn_administrasi" />
+
+        <ImageButton
+            android:id="@+id/btn_vt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_vt"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/btn_jadwal" />
+
+        <TextView
+            android:id="@+id/txt_vt"
+            android:layout_width="39dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Voca\nTechno"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_vt"
+            app:layout_constraintStart_toStartOf="@+id/btn_vt"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vt" />
+
+        <ImageButton
+            android:id="@+id/btn_vm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_vm"
+            app:layout_constraintStart_toEndOf="@+id/btn_vt"
+            app:layout_constraintTop_toBottomOf="@+id/btn_piket" />
+
+        <TextView
+            android:id="@+id/txt_vm"
+            android:layout_width="33dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Voca\nMedia"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_vm"
+            app:layout_constraintStart_toStartOf="@+id/btn_vm"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vm" />
+
+        <ImageButton
+            android:id="@+id/btn_vr"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_rs"
+            app:layout_constraintStart_toEndOf="@+id/btn_vm"
+            app:layout_constraintTop_toBottomOf="@+id/btn_pengumuman" />
+
+        <TextView
+            android:id="@+id/txt_vr"
+            android:layout_width="31dp"
+            android:layout_height="26dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Voca\nResto"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_vr"
+            app:layout_constraintStart_toStartOf="@+id/btn_vr"
+            app:layout_constraintTop_toBottomOf="@+id/btn_vr" />
+
+        <ImageButton
+            android:id="@+id/vf"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/round_btn"
+            android:src="@drawable/img_vf"
+            app:layout_constraintStart_toEndOf="@+id/btn_vr"
+            app:layout_constraintTop_toBottomOf="@+id/btn_administrasi" />
+
+        <TextView
+            android:id="@+id/txt_vf"
+            android:layout_width="42dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter_med"
+            android:gravity="center"
+            android:text="Voca\nFinance"
+            android:textColor="#000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/vf"
+            app:layout_constraintStart_toStartOf="@+id/vf"
+            app:layout_constraintTop_toBottomOf="@+id/vf" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="353dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ImageButton
+            android:id="@+id/img_bkk"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/r10"
+            android:src="@drawable/img_bkk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/img_ts"
+            android:layout_width="223dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/r10"
+            android:src="@drawable/img_ts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_bkk"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_promotion"
+        android:layout_width="145dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/crimson"
+        android:text="Disarankan untuk anda:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <ImageView
+        android:id="@+id/img_promotion"
+        android:layout_width="330dp"
+        android:layout_height="174dp"
+        android:background="@drawable/r10"
+        android:src="@drawable/img_p"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_promotion" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">VOCA App</string>
+    <string name="tentang">Voca App merupakan aplikasi buatan SMK Ananda yang menyediakan akses mudah kepada berbagai informasi maupun layanan di sekitar lingkungan sekolah. Aplikasi ini memberikan kemudahan dalam mengakses informasi yang diperlukan untuk mendukung Kegiatan Belajar Mengajar (KBM) di lingkungan sekolah SMK Ananda.\n\nDiharapkan dengan adanya aplikasi ini dapat membantu para pengguna, khusus nya warga SMK Ananda dalam Kegiatan Belajar Mengajar di sekolah.</string>
+    <string name="credit">Credit:\n1. Aradha Viriya: Design\n2. Chaelvin Bong: Design\n3. Samuel Alvin: Program\n4. Steven Christian: Design\n5. Yosi Salvador: Design</string>
+    <string name="contactus">Kalau ada masalah atau butuh bantuan, langsung aja hubungi nomor di bawah ini, ya. Gak usah sungkan, kita cari solusinya bareng-bareng!</string>
+    <string name="kodeguru">Informasi mengenai jadwal dan kode guru mata pelajaran pada setiap kelas</string>
+    <string name="bkk_1">Bursa Kerja Khusus (BKK) adalah sebuah lembaga yang dibentuk di Sekolah Menengah Kejuruan Negeri dan Swasta, sebagai unit pelaksana yang memberikan pelayanan dan informasi lowongan kerja, pelaksana pemasaran, penyaluran dan penempatan tenaga kerja, merupakan mitra Dinas Tenaga Kerja dan Transmigrasi.</string>
+    <string-array name="kelas">
+        <item>X</item>
+        <item>XI</item>
+        <item>XII</item>
+    </string-array>
+    <string-array name="jurusan">
+        <item>TKJ</item>
+        <item>DKV</item>
+        <item>AKL</item>
+        <item>PH</item>
+    </string-array>
+    <string-array name="jk">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <string name="default_web_client_id">267483232372-hse4hfvtj6abam5f2tj13ce67g7jladf.apps.googleusercontent.com</string>
+</resources>

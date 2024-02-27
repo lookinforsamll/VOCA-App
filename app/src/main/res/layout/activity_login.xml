@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/txt_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/jua"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_login2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosansbold"
+        android:text="Selamat datang di Voca App 👋🏻"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_login1" />
+
+    <TextView
+        android:id="@+id/txt_login3"
+        android:layout_width="340dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/notosans"
+        android:text="Dapatkan akses yang lebih mudah ke berbagai informasi mengenai seputar sekolah dalam satu genggam!"
+        android:textColor="#5F5F5F"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_login2" />
+
+    <EditText
+        android:id="@+id/edt_login_email"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_lr"
+        android:elevation="10dp"
+        android:fontFamily="@font/notosans"
+        android:hint="Email"
+        android:inputType="text"
+        android:paddingLeft="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_login3" />
+
+    <EditText
+        android:id="@+id/edt_login_password"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_lr"
+        android:elevation="10dp"
+        android:fontFamily="@font/notosans"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_login_email" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_lr"
+        android:fontFamily="@font/notosanssemibold"
+        android:hint="Masuk"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_login_password" />
+
+    <TextView
+        android:id="@+id/txt_l_lupa_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/notosans"
+        android:text="Lupa Password?"
+        android:textColor="#11378D"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+    <TextView
+        android:id="@+id/txt_login4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/notosans"
+        android:text="atau"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/line22"
+        app:layout_constraintStart_toStartOf="@id/line11"
+        app:layout_constraintTop_toBottomOf="@id/txt_l_lupa_password" />
+
+    <ImageView
+        android:id="@+id/line11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/img_line_2"
+        app:layout_constraintEnd_toStartOf="@id/txt_login4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_login4" />
+
+    <ImageView
+        android:id="@+id/line22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/img_line_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txt_login4"
+        app:layout_constraintTop_toTopOf="@id/txt_login4" />
+
+    <ImageButton
+        android:id="@+id/btn_google"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/imgbtngoogle"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_login4" />
+
+
+    <ImageView
+        android:id="@+id/img_l_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/img_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_login5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:fontFamily="@font/notosans"
+        android:text="Belum punya akun?"
+        android:textColor="#414141"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_l_line" />
+
+    <TextView
+        android:id="@+id/txt_l_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/notosans"
+        android:text="Daftar di sini"
+        android:textColor="#11378D"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_login5"
+        app:layout_constraintTop_toBottomOf="@id/img_l_line" />
+
+    <TextView
+        android:id="@+id/txt_login6"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/notosans_medium"
+        android:justificationMode="inter_word"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_google" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

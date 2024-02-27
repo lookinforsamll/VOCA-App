@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/img_beranda"
+        android:title="Home"
+        app:cnb_iconColor="#03A9F4"/>
+    <item
+        android:id="@+id/tentang"
+        android:icon="@drawable/img_tentang"
+        android:title="Tentang"
+        app:cnb_iconColor="#F44336"/>
+    <item
+        android:id="@+id/kontak"
+        android:icon="@drawable/img_kontak"
+        android:title="Kontak"
+        app:cnb_iconColor="#4CAF50" />
+    <item
+        android:id="@+id/profil"
+        android:icon="@drawable/img_profil"
+        android:title="Profil"
+        app:cnb_iconColor="#FF9800" />
+</menu>
