@@ -3,7 +3,6 @@ package com.samuel.vocaapp
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -30,7 +29,7 @@ import com.google.firebase.database.ValueEventListener
 import com.samuel.vocaapp.databinding.ActivityLoginBinding
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
@@ -240,7 +239,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this@LoginActivity, "Google Sign-In successful.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
-                    finish()
+                    finishAffinity()
                 } else {
                     Toast.makeText(this@LoginActivity, "Authentication failed.", Toast.LENGTH_SHORT).show()
                 }

@@ -144,7 +144,7 @@ class RegisterActivity2 : AppCompatActivity() {
                     Toast.makeText(this, "Berhasil Registrasi, Silakhan Login.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
-                    finish()
+                    finishAffinity()
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Gagal menyimpan data: ${e.message}", Toast.LENGTH_SHORT).show()

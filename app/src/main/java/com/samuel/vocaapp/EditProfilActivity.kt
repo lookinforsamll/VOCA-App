@@ -3,7 +3,6 @@ package com.samuel.vocaapp
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.widget.ArrayAdapter
@@ -27,7 +26,7 @@ import com.squareup.picasso.Picasso
 import com.yalantis.ucrop.UCrop
 import java.io.File
 
-class EditProfilActivity : AppCompatActivity() {
+class EditProfilActivity : BaseActivity() {
     private lateinit var binding: ActivityEditProfilBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
@@ -155,12 +154,32 @@ class EditProfilActivity : AppCompatActivity() {
                 val fileRef: StorageReference =
                     storageReference.child("foto_profil").child("$userId.jpg")
                 fileRef.putFile(it).addOnSuccessListener { _ ->
+                    Toast.makeText(
+                        this@EditProfilActivity,
+                        "Mohon tunggu, foto sedang diupload",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
                     val profileImageRef = storageReference.child("foto_profil").child("$userId.jpg")
                     profileImageRef.downloadUrl.addOnSuccessListener { uri ->
                         Picasso.get().load(uri).into(binding.profileImg)
 
                         database.child("users").child(userId).child("profileImageUrl")
                             .setValue(uri.toString())
+                            .addOnSuccessListener {
+                                Toast.makeText(
+                                    this@EditProfilActivity,
+                                    "Foto profil berhasil diupload",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(
+                                    this@EditProfilActivity,
+                                    "Gagal menyimpan URL gambar: ${e.message}",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                     }
                 }.addOnFailureListener { e ->
                     Toast.makeText(
